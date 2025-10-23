@@ -10,7 +10,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://mern-project-zlrk.onrender.com',
+        target: 'https://mern-project-l3h4.onrender.com',
         changeOrigin: true,
         rewrite: (path) => path,
       },

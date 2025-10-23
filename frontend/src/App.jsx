@@ -52,11 +52,11 @@ const AppContent = () => {
           <Routes>
             <Route 
               path="/login" 
-              element={<Login />} 
+              element={!isAuthenticated ? <AuthPage /> : <Navigate to="/" />} 
             />
             <Route 
               path="/register" 
-              element={<Register />} 
+              element={!isAuthenticated ? <AuthPage /> : <Navigate to="/" />} 
             />
             <Route 
               path="/" 

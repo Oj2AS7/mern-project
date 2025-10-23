@@ -98,7 +98,7 @@ body {
 }
 
 .auth-card {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(20px);
   padding: 3rem;
   border-radius: 20px;
@@ -115,7 +115,7 @@ body {
 .auth-card h2 {
   text-align: center;
   margin-bottom: 2.5rem;
-  color: #1f2937;
+  color: #17407a;
   font-size: 2rem;
   font-weight: 700;
   background: linear-gradient(135deg, #667eea, #764ba2);
@@ -127,7 +127,7 @@ body {
 .auth-toggle {
   text-align: center;
   margin-top: 1.5rem;
-  color: #6b7280;
+  color: #16326b;
 }
 
 .link-button {

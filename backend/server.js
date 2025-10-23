@@ -9,7 +9,7 @@ const authRoutes = require('./routes/auth');
 const bmiRoutes = require('./routes/bmi');
 
 const app = express();
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT;
 
 // Connect to database
 connectDB();

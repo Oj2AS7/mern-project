@@ -6,7 +6,13 @@ import Login from './components/Login';
 import Register from './components/Register';
 import BMICalculator from './components/BMICalculator';
 import BMIDashboard from './components/BMIDashboard';
+import cors from 'cors';
 import './App.css';
+
+app.use(cors({
+  origin: "https://mern-project-ten-gold.vercel.app/", // Replace with your Vercel frontend URL
+  credentials: true
+}));
 
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated, loading } = useAuth();

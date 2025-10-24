@@ -1,8 +1,13 @@
 import axios from 'axios';
 
-// Use relative base URL so Vite proxy handles API to backend
+// Use environment variable or fallback to production URL
+const API_BASE_URL = import.meta.env.VITE_API_URL || 
+  (import.meta.env.PROD 
+    ? 'https://mern-project-l3h4.onrender.com/api'
+    : '/api');
+
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: API_BASE_URL,
   headers: {
     'Content-Type': 'application/json'
   }

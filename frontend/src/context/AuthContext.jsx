@@ -3,7 +3,10 @@ import axios from 'axios';
 
 // Create axios instance for auth
 const authApi = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_URL || 
+    (import.meta.env.PROD 
+      ? 'https://mern-project-l3h4.onrender.com/api'
+      : '/api'),
   headers: {
     'Content-Type': 'application/json'
   }

@@ -16,7 +16,11 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: ['https://mern-project-ten-gold.vercel.app/'],
+  origin: [
+    'http://localhost:5173',
+    'http://localhost:5174',
+    'mern-project-ten-gold.vercel.app' // Replace with your actual Vercel URL
+  ],
   credentials: true,
 }));
 app.use(express.json());

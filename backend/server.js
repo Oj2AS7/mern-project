@@ -15,12 +15,21 @@ const PORT = process.env.PORT;
 connectDB();
 
 // Middleware
+const allowedOrigins = [
+  'http://localhost:5173',
+  'http://localhost:5174',
+  'https://mern-project-ten-gold.vercel.app',
+  'https://mern-project-d22nmwxj8-oj2as7s-projects.vercel.app',
+  /^https:\/\/mern-project.*\.vercel\.app$/ // Allow all Vercel preview URLs
+];
+
+// Add production frontend URL from environment if provided
+if (process.env.FRONTEND_URL) {
+  allowedOrigins.push(process.env.FRONTEND_URL);
+}
+
 app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'http://localhost:5174',
-    'mern-project-ten-gold.vercel.app' // Replace with your actual Vercel URL
-  ],
+  origin: allowedOrigins,
   credentials: true,
 }));
 app.use(express.json());
